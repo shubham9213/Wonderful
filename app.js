@@ -15,7 +15,7 @@ const listings=require("./routes/listing.js");
 const reviewRoute=require("./routes/review.js");
 const userRoute=require("./routes/user.js");
 const searchRoute=require("./routes/search.js");
-// const dburl=process.env.ATLASDB_URL;
+const dburl=process.env.ATLASDB_URL;
 
 const session=require("express-session");
 const MongoStore=require("connect-mongo")
@@ -25,7 +25,7 @@ const LocalStrategy=require("passport-local");
 const User=require("./Models/user.js");
 
 
-const dburl="mongodb://127.0.0.1:27017/wonderlust";
+//const dburl="mongodb://127.0.0.1:27017/wonderlust";
 
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"views"));  
